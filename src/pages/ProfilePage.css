@@ -1,0 +1,33 @@
+.profile-page {
+  background-color: #0000006f;
+  backdrop-filter: blur(1px); /* apply blur effect */
+  padding: 40px;
+  max-width: 800px;
+  margin: 100px auto;
+  font-family: Arial, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffb300;
+  margin-bottom: 20px;
+}
+
+.profile-description {
+  font-size: 14px;
+  color: #ffb300;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.profile-description p {
+  margin-bottom: 15px;
+}
+
+.profile-description p:last-child {
+  margin-bottom: 0;
+}

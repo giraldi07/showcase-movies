@@ -1,0 +1,14 @@
+.social-media-icon {
+  display: flex;
+  justify-content: space-around; /* Distribute icons evenly */
+  gap: 20px; /* Space between icons */
+}
+
+.social-icon {
+  color: #f88000; /* Default color for icons */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.social-icon:hover {
+  color: #0077b5; /* Change color on hover (for example, blue for GitHub/Instagram) */
+}
