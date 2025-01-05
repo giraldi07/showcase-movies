@@ -1,0 +1,4 @@
+.footer {
+  background-color: #0000006f;
+  backdrop-filter: blur(10px); /* apply blur effect */
+}

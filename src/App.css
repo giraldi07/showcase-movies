@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Default theme */
+.app {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark {
+  background-color: #121212;
+  background-size: contain;
+  color: white;
+  background-image: url(/bg-dark.jpg);
+}
+
+.app.light {
+  background-color: #cfcfcf;
+  background-size: contain;
+  color: black;
+  background-image: url(/white2.jpg);
+}
+
+/* Common styles */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #333;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+/* .movie-section {
+  margin-bottom: 40px;
+} */
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.movie-card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #444;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.movie-card img {
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1);
+}
+
+/* Add this in App.css */
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.theme-toggle svg {
+  margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

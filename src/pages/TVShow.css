@@ -1,0 +1,158 @@
+/* TVShows.css */
+.tvshows-section {
+  padding: 20px;
+  background-color: #48484841;
+  border-radius: 15px;
+}
+
+.tvshows-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f6f6f6;
+}
+
+.tvshows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.tvshow-card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tvshow-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tvshow-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tvshow-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.tvshow-card:hover .tvshow-info {
+  opacity: 1;
+}
+
+.tvshow-details h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tvshow-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.view-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #888;
+}
+
+/* Media Queries for mobile */
+@media (max-width: 768px) {
+  .tvshows-section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Pastikan grid tetap menampilkan dua kolom pada perangkat kecil */
+  .tvshows-grid {
+    grid-template-columns: repeat(2, 1fr); /* Menampilkan dua kolom */
+    gap: 15px;
+  }
+
+  .tvshow-card {
+    max-width: 100%;
+  }
+
+  .tvshow-card img {
+    height: 150px;
+  }
+
+  .tvshow-details h3 {
+    font-size: 1rem;
+  }
+
+  .tvshow-details p {
+    font-size: 0.9rem;
+  }
+
+  .view-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tvshows-section h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Untuk layar ponsel, tetap dua kolom tetapi lebih kecil */
+  .tvshows-grid {
+    grid-template-columns: repeat(2, 1fr); /* Menampilkan dua kolom */
+    gap: 10px;
+  }
+
+  .tvshow-card {
+    max-width: 100%;
+  }
+
+  .tvshow-card img {
+    height: 120px;
+  }
+
+  .tvshow-details h3 {
+    font-size: 0.9rem;
+  }
+
+  .tvshow-details p {
+    font-size: 0.8rem;
+  }
+
+  .view-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,111 @@
+.custom-search-bar-container {
+  padding: 10px;
+  position: relative; /* Added to position close button outside the results container */
+}
+
+.custom-search-input-group {
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.custom-search-results {
+  margin-top: 5px;
+  max-height: 400px; /* Set a max height for the results container */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  padding-right: 10px; /* Add right padding for the scrollbar */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-control {
+  background-color: #e9e9e9;
+}
+
+.custom-search-item {
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #0000006b;
+  backdrop-filter: blur(8px);
+}
+
+.custom-search-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-search-item img {
+  margin-right: 15px;
+}
+
+.custom-movie-title,
+.custom-tv-show-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.custom-item-title {
+  font-size: 1rem;
+}
+
+.custom-item-rating {
+  font-size: 0.9rem;
+}
+
+.custom-loading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Close button outside the results container */
+.custom-close-btn {
+  /* position: absolute; */
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #ff6200;
+  cursor: pointer;
+}
+
+.custom-close-btn:hover {
+  color: #ff0000;
+}
+
+.custom-no-results {
+  text-align: center;
+  font-size: 1rem;
+  color: #ffd900;
+  margin-top: -25px;
+}
+
+@media (max-width: 768px) {
+  .custom-search-bar-container {
+    padding: 15px;
+  }
+
+  .custom-search-item img {
+    width: 80px;
+  }
+
+  .custom-movie-title,
+  .custom-tv-show-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-search-item img {
+    width: 60px;
+  }
+
+  .custom-search-bar-container {
+    padding: 6px 10px;
+  }
+}

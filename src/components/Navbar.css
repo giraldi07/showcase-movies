@@ -1,0 +1,160 @@
+Navbar
+.custom-navbar {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 1030; /* Pastikan navbar tetap di atas elemen lain */
+}
+
+.custom-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center; /* Menjaga elemen sejajar secara vertikal */
+  margin-left: auto; /* Membuat navbar-nya berada di sebelah kanan */
+}
+
+/* Setiap item navbar di dropdown */
+.navbar-dropdown-item {
+  margin-right: 20px; /* Jarak antar item navbar */
+  padding: 10px 20px; /* Padding pada item dropdown */
+  font-size: 16px; /* Ukuran font yang proporsional */
+  transition: all 0.3s ease; /* Transisi halus untuk semua perubahan */
+}
+
+.navbar-dropdown-item:hover {
+  color: rgb(173, 118, 0); /* Mengubah warna teks saat hover */
+  background-color: rgba(
+    0,
+    255,
+    200,
+    0.246
+  ); /* Menambahkan latar belakang merah transparan saat hover */
+  transform: scale(1.05); /* Efek zoom-in pada item */
+  border-radius: 10px;
+}
+.navbar-dropdown-item img {
+  border-radius: 50%; /* Gaya bulat pada gambar avatar */
+}
+
+
+.search-bar-container {
+    margin-top: 60px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1028;
+    width: -webkit-fill-available;
+}
+
+.search-results {
+  padding-top: 20px;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-item img {
+  margin-right: 10px;
+}
+
+.search-item h5,
+.search-item p {
+  margin: 0;
+}
+
+.search-bar-container .search-bar {
+  z-index: 100;
+}
+
+
+.no-results-message {
+  margin-top: 10px; /* Memberikan jarak dengan elemen di atasnya */
+  font-size: 14px;
+  color: #999;
+}
+
+/* Toggle theme button */
+#navbar-theme-toggle button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.judul-website h5 {
+  display: none; /* Sembunyikan secara default */
+}
+
+@media (max-width: 1199px) {
+  .judul-website h5 {
+    display: block; /* Tampilkan hanya untuk layar kecil */
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+  }
+}
+
+
+/* Media queries untuk tablet dan desktop */
+@media (max-width: 1199px) {
+  .navbar-nav {
+    margin-left: 20px; /* Mengurangi jarak di desktop */
+  }
+
+  .navbar-dropdown-item {
+    margin-right: 15px; /* Mengurangi jarak antar item navbar */
+    font-size: 14px; /* Mengurangi ukuran font pada tampilan lebih kecil */
+  }
+
+  .navbar-search-bar {
+    display: none; /* Sembunyikan search bar pada tampilan lebih kecil */
+  }
+
+  /* Menyembunyikan elemen tertentu pada ukuran lebih kecil */
+  #navbar-avatar {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column; /* Navbar menjadi vertikal pada tampilan kecil */
+    align-items: flex-start; /* Menjaga semua item di kiri */
+    margin-left: 0;
+  }
+
+  .navbar-dropdown-item {
+    margin-right: 0;
+    font-size: 16px;
+  }
+
+  /* Menampilkan avatar di bawah navbar pada mobile */
+  #navbar-avatar {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .search-bar-container {
+      margin-top: 40px;
+
+  }
+}
+
+
+@media (max-width: 530px) {
+    .search-bar-container {
+      margin-top: 40px;
+
+  }
+}

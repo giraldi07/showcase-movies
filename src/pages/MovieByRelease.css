@@ -1,0 +1,167 @@
+/* Container utama */
+.movie-release-container {
+  padding: 1rem;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+/* Banner */
+.container-banner {
+  margin-bottom: 2rem;
+}
+
+.banner-release {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Header utama */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ff0000;
+}
+
+/* Kartu tahun */
+.year-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.year-card {
+  background-color: #f8f9fa;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 70px;
+}
+
+.year-card:hover {
+  background-color: #e9ecef;
+  transform: scale(1.05);
+}
+
+.year-card.active {
+  background-color: #ff0000;
+  color: #fff;
+  border-color: #a50000;
+}
+
+/* Loader dan Error */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Container Movies dan TV Shows */
+.movies-tv-container {
+  margin-top: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #e60000;
+}
+
+.release-divider {
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+/* Daftar movies dan TV shows */
+.movies-list,
+.tvshows-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-item,
+.tvshow-item {
+  background-color: #00000066;
+  backdrop-filter: blur(2px);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.323);
+  padding: 1rem;
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.movie-item:hover,
+.tvshow-item:hover {
+  transform: scale(1.05);
+}
+
+.movie-image,
+.tvshow-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.judul-card {
+  font-size: 1.2rem;
+  color: #e9a700;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.desc-card {
+  font-size: 0.9rem;
+  color: #e20004;
+  margin: 0.25rem 0;
+}
+
+.more-info-link {
+  margin-top: 0.5rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.more-info-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .movie-item,
+  .tvshow-item {
+    flex: 1 1 calc(100% - 1rem);
+  }
+
+  .year-card {
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
